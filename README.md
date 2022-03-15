@@ -6,7 +6,7 @@
 
 Cross-platform clipboard copy and paste in one function call.
 
-## Install
+## Installation
 
 ```bash
 pip install philiprehberger-clipboard
