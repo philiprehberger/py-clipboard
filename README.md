@@ -3,6 +3,7 @@
 [![Tests](https://github.com/philiprehberger/py-clipboard/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/py-clipboard/actions/workflows/publish.yml)
 [![PyPI version](https://img.shields.io/pypi/v/philiprehberger-clipboard.svg)](https://pypi.org/project/philiprehberger-clipboard/)
 [![License](https://img.shields.io/github/license/philiprehberger/py-clipboard)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Cross-platform clipboard copy and paste in one function call.
 
