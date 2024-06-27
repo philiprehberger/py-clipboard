@@ -2,8 +2,7 @@
 
 [![Tests](https://github.com/philiprehberger/py-clipboard/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/py-clipboard/actions/workflows/publish.yml)
 [![PyPI version](https://img.shields.io/pypi/v/philiprehberger-clipboard.svg)](https://pypi.org/project/philiprehberger-clipboard/)
-[![License](https://img.shields.io/github/license/philiprehberger/py-clipboard)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/py-clipboard)](https://github.com/philiprehberger/py-clipboard/commits/main)
 
 Cross-platform clipboard copy and paste in one function call.
 
@@ -61,7 +60,6 @@ clipboard paste
 | Linux (X11) | `xclip` or `xsel` | `xclip` or `xsel` |
 | Linux (Wayland) | `wl-copy` | `wl-paste` |
 
-
 ## Development
 
 ```bash
@@ -69,6 +67,24 @@ pip install -e .
 python -m pytest tests/ -v
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/py-clipboard)
+
+🐛 [Report issues](https://github.com/philiprehberger/py-clipboard/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/py-clipboard/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
