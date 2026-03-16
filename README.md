@@ -60,6 +60,14 @@ clipboard paste
 | Linux (X11) | `xclip` or `xsel` | `xclip` or `xsel` |
 | Linux (Wayland) | `wl-copy` | `wl-paste` |
 
+
+## Development
+
+```bash
+pip install -e .
+python -m pytest tests/ -v
+```
+
 ## License
 
 MIT
