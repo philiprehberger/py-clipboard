@@ -24,9 +24,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/philiprehberger/py-clipboard"
+Homepage = "https://github.com/philiprehberger/py-clipboard#readme"
 Repository = "https://github.com/philiprehberger/py-clipboard"
 Issues = "https://github.com/philiprehberger/py-clipboard/issues"
+Changelog = "https://github.com/philiprehberger/py-clipboard/blob/main/CHANGELOG.md"
 
 [project.scripts]
 clipboard = "philiprehberger_clipboard.__main__:main"
