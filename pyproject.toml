@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "philiprehberger-clipboard"
-version = "0.1.5"
+version = "0.1.6"
 description = "Cross-platform clipboard copy and paste in one function call"
 readme = "README.md"
 license = "MIT"
@@ -34,3 +34,9 @@ clipboard = "philiprehberger_clipboard.__main__:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/philiprehberger_clipboard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
