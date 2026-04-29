@@ -6,7 +6,7 @@ import shutil
 import subprocess
 import sys
 
-__all__ = ["copy", "paste", "ClipboardError"]
+__all__ = ["copy", "paste", "is_available", "ClipboardError"]
 
 
 class ClipboardError(RuntimeError):
@@ -36,6 +36,25 @@ def _get_linux_paste_cmd() -> list[str]:
         return ["wl-paste"]
     raise ClipboardError(
         "No clipboard tool found. Install xclip, xsel, or wl-clipboard."
+    )
+
+
+def is_available() -> bool:
+    """Return True if a clipboard backend is detected on the current platform.
+
+    Lets callers feature-test before invoking :func:`copy` or :func:`paste`
+    instead of catching :class:`ClipboardError`.
+
+    Returns:
+        ``True`` if a known clipboard tool is available, ``False`` otherwise.
+    """
+    if sys.platform == "win32":
+        return shutil.which("clip.exe") is not None and shutil.which("powershell.exe") is not None
+    if sys.platform == "darwin":
+        return shutil.which("pbcopy") is not None and shutil.which("pbpaste") is not None
+    return any(
+        shutil.which(tool) is not None
+        for tool in ("xclip", "xsel", "wl-copy", "wl-paste")
     )
 
 

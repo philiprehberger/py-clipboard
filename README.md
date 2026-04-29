@@ -22,6 +22,17 @@ text = paste()
 print(text)  # Hello, clipboard!
 ```
 
+### Detect availability
+
+```python
+from philiprehberger_clipboard import copy, is_available
+
+if is_available():
+    copy("hello")
+else:
+    print("install xclip / xsel / wl-clipboard to enable copy")
+```
+
 ### CLI
 
 Copy text from stdin:
@@ -49,6 +60,7 @@ clipboard paste
 |---|---|
 | `copy(text: str) -> None` | Copy a string to the system clipboard |
 | `paste() -> str` | Read a string from the system clipboard |
+| `is_available() -> bool` | Return `True` if a clipboard backend is detected on the current platform |
 | `ClipboardError` | Raised when clipboard tool is unavailable or operation fails |
 
 ### Platform support

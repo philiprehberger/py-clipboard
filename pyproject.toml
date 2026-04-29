@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "philiprehberger-clipboard"
-version = "0.1.7"
-description = "Cross-platform clipboard copy and paste in one function call"
+version = "0.2.0"
+description = "Cross-platform clipboard copy and paste in one function call."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"

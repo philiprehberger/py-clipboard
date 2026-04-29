@@ -1,11 +1,19 @@
 # Changelog
 
+## 0.2.0 (2026-04-28)
+
+- Add `is_available()` to detect whether a clipboard backend is present without raising
+- Sync `pyproject.toml` description to end with a period (matches README one-liner)
+
 ## 0.1.7 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
 - Update CI checkout action to v5 for Node.js 24 compatibility
 - Add GitHub issue templates, dependabot config, and PR template
-## 0.1.6- Add pytest and mypy tool configuration to pyproject.toml
+
+## 0.1.6
+
+- Add pytest and mypy tool configuration to pyproject.toml
 
 ## 0.1.5
 
