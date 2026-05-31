@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 (2026-05-30)
+
+- Add `clear()` to empty the clipboard
+- Add `equals(text)` for non-destructive equality checks
+
 ## 0.2.0 (2026-04-28)
 
 - Add `is_available()` to detect whether a clipboard backend is present without raising

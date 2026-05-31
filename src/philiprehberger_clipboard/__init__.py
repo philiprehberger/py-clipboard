@@ -6,7 +6,7 @@ import shutil
 import subprocess
 import sys
 
-__all__ = ["copy", "paste", "is_available", "ClipboardError"]
+__all__ = ["copy", "paste", "is_available", "clear", "equals", "ClipboardError"]
 
 
 class ClipboardError(RuntimeError):
@@ -137,3 +137,34 @@ def paste() -> str:
         raise ClipboardError(f"Clipboard paste failed: {exc}") from exc
 
     return result.stdout
+
+
+def clear() -> None:
+    """Clear the clipboard. Equivalent to ``copy("")``.
+
+    No-op when the clipboard backend is unavailable; raises :class:`ClipboardError`
+    matching the package's existing error semantics if :func:`copy` itself raises.
+
+    Raises:
+        ClipboardError: If the clipboard tool is unavailable or the operation fails.
+    """
+    copy("")
+
+
+def equals(text: str) -> bool:
+    """Return True if the clipboard currently contains exactly *text*.
+
+    Non-destructive (uses :func:`paste` internally). Returns ``False`` when the
+    clipboard backend is unavailable (instead of raising).
+
+    Args:
+        text: The string to compare against the clipboard contents.
+
+    Returns:
+        ``True`` if the clipboard contents exactly match *text*, ``False`` otherwise
+        or if the clipboard backend is unavailable.
+    """
+    try:
+        return paste() == text
+    except ClipboardError:
+        return False

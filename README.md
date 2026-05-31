@@ -22,6 +22,19 @@ text = paste()
 print(text)  # Hello, clipboard!
 ```
 
+### Clearing and checking
+
+```python
+from philiprehberger_clipboard import clear, copy, equals
+
+copy("secret")
+equals("secret")  # True
+equals("other")   # False
+
+clear()
+equals("")        # True
+```
+
 ### Detect availability
 
 ```python
@@ -61,6 +74,8 @@ clipboard paste
 | `copy(text: str) -> None` | Copy a string to the system clipboard |
 | `paste() -> str` | Read a string from the system clipboard |
 | `is_available() -> bool` | Return `True` if a clipboard backend is detected on the current platform |
+| `clear() -> None` | Clear the clipboard (equivalent to `copy("")`) |
+| `equals(text: str) -> bool` | Return `True` if the clipboard contains exactly `text`; non-destructive, returns `False` when backend is unavailable |
 | `ClipboardError` | Raised when clipboard tool is unavailable or operation fails |
 
 ### Platform support
